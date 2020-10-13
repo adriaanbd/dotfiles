@@ -32,8 +32,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'patstockwell/vim-monokai-tasty'
-" Plug 'itchyny/lightline.vim'
+" git plugins
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " Airline config
@@ -44,6 +45,4 @@ let g:airline_section_y = 'BN: %{bufnr("%")}'
 
 " Colorscheme
 colorscheme vim-monokai-tasty
-" let g:lightline = {'colorscheme': 'monokai_tasy'}
 
-let s:hidden_all = 0
