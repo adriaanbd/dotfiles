@@ -10,11 +10,12 @@ set softtabstop=4
 " when bracket, briefly jump to matching bracket
 set showmatch
 
+set wrap
 set textwidth=100
 
 " wrap long lines at a char in breakat rather than last char on screen
 set linebreak
-set showbreak=+++
+set showbreak=+++ 
 
 " allow backspace over autoindent, line breaks and over the start of insert
 set backspace=indent,eol,start  
@@ -30,6 +31,19 @@ set encoding=utf8
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'patstockwell/vim-monokai-tasty'
+" Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
-let g:airline_theme='simple'
+" Airline config
+let g:airline_theme='monokai_tasty'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_section_b = '%{strftime("%c")}'
+let g:airline_section_y = 'BN: %{bufnr("%")}'
+
+" Colorscheme
+colorscheme vim-monokai-tasty
+" let g:lightline = {'colorscheme': 'monokai_tasy'}
+
+let s:hidden_all = 0
